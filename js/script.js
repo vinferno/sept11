@@ -3,6 +3,7 @@ var game_list_item = game_unordered_list.children;
 var add_submit = document.getElementById('add_submit_button');
 var target_parent;
 var new_minus;
+var games = document.getElementsByClassName('game_list_item');
 
 function add_game(name_value){
    var new_game = name_value;
@@ -93,10 +94,12 @@ document.getElementById("name_input_box").addEventListener('keydown', function k
 var function_loop_mouse_enter = function(){
 	for (var i= 0;i<game_list_item.length;i++){
 		game_list_item[i].addEventListener('mouseenter', function(){
-		   	for (var i = 2; game_list_item.length - 2; i++) {
-			   	if (game_list_item[i].children.length>0){
-			   		game_list_item[i].removeChild(game_list_item[i].children[0]);
-			   	};
+		   	for (var i = 0;i < games.length; i++) {
+		   			//alert(games[i]);
+			   	if (games[i].children.length>0){
+			   		games[i].removeChild(games[i].children[0]);
+				   	
+				};
    			};
 		});
 	};
