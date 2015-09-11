@@ -29,8 +29,9 @@ function get_index(target){
 
 game_unordered_list.onclick = function(event) {
     var target = get_event_target(event);
-    get_index(target);
-    make_minus(target);     
+    get_index(target);    
+    make_minus(target); 
+    function_minus(target);   
 };
 
 game_list_item[0].addEventListener('click',function(){
@@ -63,9 +64,10 @@ function make_minus(target){
 
    
 
-    var function_minus = function() {
-        
-        alert("function_minus");
+    var function_minus = function(target) {  
+    	if (target.innerText === "-"){ 
+    	target.parentNode.parentNode.removeChild(target.parentNode);
+       }
     };
 
     var add_minus_listener = function(){
