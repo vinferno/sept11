@@ -55,7 +55,7 @@ function make_minus(target){
 		  	target.appendChild(new_minus);
 			new_minus.innerText = "-"; 
 			new_minus.classList.toggle("minus");
-			add_minus_listener(target);
+			add_minus_listener();
 			}
 		}
 	}
@@ -63,10 +63,8 @@ function make_minus(target){
 
    
 
-    var function_minus = function(event) {
-        var target = get_event_target(event)
-       
-		target.removeChild(target);
+    var function_minus = function() {
+        
         alert("function_minus");
     };
 
