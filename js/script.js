@@ -61,7 +61,7 @@ function make_minus(target){
 			new_minus.classList.toggle("minus");
 			add_minus_listener();
 			};
-		}else{target.removeChild(target.children[0]);}
+		}else{if(target.children.length == 1){target.removeChild(target.children[0])};}
 	};
 };
 
